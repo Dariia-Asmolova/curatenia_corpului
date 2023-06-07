@@ -1,44 +1,51 @@
 @use "variables" as *;
 
 .footer {
-  background: $brownDark;
+  background: rgba(251, 238, 222, 0.927);
 
   &__container {
     padding-top: 50px;
   }
 
+  &__title {
+    text-align: center;
+    color: $black;
+    font-size: 50px;
+    padding-bottom: 20px;
+  }
+
   &__content {
-    display: flex;
+    // display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   &__contacts {
     padding-right: 15px;
-    color: $brownLight;
+    color: $black;
+  }
+
+  &__number {
+    text-align: center;
   }
 
   .contacts__title {
-    font-family: "Montserrat";
+    font-family: "Lato";
     font-style: normal;
     font-weight: 500;
-    font-size: 26px;
+    font-size: 20px;
     line-height: 32px;
   }
 
-  .socials {
-    display: flex;
-    gap: 20px;
-  }
-
   &__phone {
-    color: $brownLight;
-    font-size: 26px;
+    color: $black;
+    font-size: 20px;
     line-height: 32px;
   }
 }
 
 .map {
+  padding-left: 100px;
   @media screen and (max-width: $tablet) {
     width: 200px;
     height: 200px;
