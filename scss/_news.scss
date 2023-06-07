@@ -8,24 +8,37 @@
     padding-top: 50px;
   }
 
-  .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 26vw);
 
     @media screen and (max-width: $tablet) {
-      flex-wrap: wrap;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 50vw);
     }
+  }
 
-    @media screen and (max-width: $desktop) {
-      flex-wrap: wrap;
+  &__imgh {
+    @media screen and (max-width: $tablet) {
+      z-index: -3;
+    }
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 23vw);
+
+    @media screen and (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 50vw);
     }
   }
 
   .block {
-    height: 350px;
-    width: 400px;
-    border: 3px solid pink;
+    height: 300px;
+    width: 300px;
     border-radius: 10%;
     display: flex;
     flex-direction: column;
@@ -33,7 +46,7 @@
     margin: 15px;
 
     &__text {
-      min-width: 370px;
+      max-width: 370px;
       margin-bottom: 15px;
       margin-left: 8px;
       color: $black;
@@ -41,12 +54,19 @@
       font-style: normal;
       font-weight: 300;
       font-size: 15px;
-      line-height: 30px;
+      line-height: 20px;
       text-align: center;
       text-transform: uppercase;
+
+      @media screen and (max-width: $tablet) {
+        line-height: 15px;
+        font-size: 10px;
+      }
     }
 
     @media screen and (max-width: $tablet) {
+      height: 230px;
+      width: 230px;
     }
   }
 }
