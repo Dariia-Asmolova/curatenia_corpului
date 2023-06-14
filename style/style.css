@@ -46,6 +46,16 @@ img {
   }
 }
 
+.pk__title {
+  margin: 15px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.pk__text {
+  font-size: 18px;
+}
+
 .header {
   background-color: #F8F1EA;
 }
@@ -175,6 +185,21 @@ img {
   .burger {
     display: flex;
     cursor: pointer;
+  }
+}
+
+.pk {
+  font-size: 20px;
+  text-align: center;
+  padding: 30px;
+  transition: all 0.5s ease-in-out;
+}
+.pk a:hover {
+  color: lightcoral;
+}
+@media screen and (max-width: 767px) {
+  .pk {
+    color: #fff;
   }
 }
 
